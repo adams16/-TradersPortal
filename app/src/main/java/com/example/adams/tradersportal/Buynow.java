@@ -24,11 +24,9 @@ public class Buynow extends AppCompatActivity {
         textView6 = (TextView) findViewById(R.id.textView6);
         edittext2 = (EditText) findViewById(R.id.editText2);
 
-        Intent i = getIntent();
-
-        String name = i.getStringExtra("name");
-        String price = i.getStringExtra("price");
-
+        Intent getdata = getIntent();
+        String name = getdata.getStringExtra("name");
+        String price = getdata.getStringExtra("price");
         textview4.setText(name);
         textView6.setText(price);
 

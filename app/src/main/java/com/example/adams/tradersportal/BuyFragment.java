@@ -50,12 +50,13 @@ public class BuyFragment extends Fragment implements Serializable{
                 String name = sellProduct_.getName();
                 String price = sellProduct_.getPrice();
 
-                Intent push = new Intent(getActivity(), Buynow.class);
-                push.putExtra("name", product_name.getText().toString());
-                push.putExtra("price", product_price.getText().toString());
-                startActivity(push);
+                Intent pushdata = new Intent(getActivity(), Buynow.class);
+                pushdata.putExtra("name", product_name.getText().toString());
+                pushdata.putExtra("price", product_price.getText().toString());
+                startActivity(pushdata);
 
-                Toast.makeText(getActivity(), "Clicked" +name +price,Toast.LENGTH_SHORT).show();
+
+                Toast.makeText(getActivity(), "Item Viewed" +name +price,Toast.LENGTH_SHORT).show();
             }
         });
 
